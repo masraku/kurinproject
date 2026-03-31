@@ -24,10 +24,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${mali.variable} ${nunito.variable} h-full antialiased`}
     >
-      <body 
-        className="min-h-full flex flex-col"
+      <body
+        className="min-h-full flex flex-col scroll-gradient-bg"
         style={{
-          background: "linear-gradient(rgba(255, 182, 208, 0.5), rgba(255, 182, 208, 0.5)), url('/assets/foto/background.png') center/cover fixed"
+          background:
+            "linear-gradient(135deg, rgba(255, 182, 208, 0.6) 0%, rgba(201, 160, 220, 0.4) 50%, rgba(255, 182, 208, 0.6) 100%), url('/assets/foto/background.png') center/cover fixed",
         }}
       >
         {children}
