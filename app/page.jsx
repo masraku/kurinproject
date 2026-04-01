@@ -19,8 +19,16 @@ import {
 } from "lucide-react";
 
 const CONFETTI_COLORS = [
-  "#ff3377", "#ff75a3", "#ffd700", "#a8e6cf", "#c9a0dc",
-  "#ffb347", "#ff6b6b", "#74b9ff", "#fd79a8", "#ffeaa7",
+  "#ff3377",
+  "#ff75a3",
+  "#ffd700",
+  "#a8e6cf",
+  "#c9a0dc",
+  "#ffb347",
+  "#ff6b6b",
+  "#74b9ff",
+  "#fd79a8",
+  "#ffeaa7",
 ];
 
 export default function Home() {
@@ -74,7 +82,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const folds = document.querySelectorAll(".fold-item");
@@ -89,7 +97,7 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const reveals = document.querySelectorAll(".reveal-on-scroll");
@@ -110,7 +118,8 @@ export default function Home() {
       const y = Math.sin((angle * Math.PI) / 180) * distance - 200;
       return {
         id: i,
-        color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
+        color:
+          CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
         x: `${x}px`,
         y: `${y}px`,
         rotation: `${Math.random() * 720 - 360}deg`,
@@ -180,17 +189,53 @@ export default function Home() {
   };
 
   const page4Lines = [
-    { type: "paragraph", text: "Sebenernya banyak banget yang mau aku omongin di sini, tapi aku ga tau harus mulai dari mana. Jadi yaudah, aku tulis aja semua yang ada di kepala aku ya." },
-    { type: "paragraph", text: "Pertama, aku mau bilang makasih. Makasih udah jadi salah satu alasan aku semangat ngejalainin hari-hari. Kadang hidup tuh berat banget, tapi setiap kali liat kamu ketawa, nyanyi, atau bahkan cuma ngobrol random, rasanya tuh... gimana ya, kayak dunia jadi lebih ringan aja gitu." },
-    { type: "paragraph", text: "Kedua, aku mau bilang kalau aku bangga banget sama kamu. Aku tau perjalanan kamu ga selalu mulus, pasti ada hari-hari dimana kamu ngerasa capek, ngerasa ga cukup, atau bahkan pengen nyerah. Tapi kamu tetep di sini. Kamu tetep berjuang. Dan itu... itu yang bikin aku makin sayang sama kamu." },
-    { type: "japanese", text: "大切な人へ、いつもそばにいるよ。", sub: "(Untuk orang yang berharga, aku selalu ada di sisimu.)" },
-    { type: "paragraph", text: "Ketiga — dan ini yang paling penting — aku mau kamu tau kalau kamu ga sendirian. Apapun yang terjadi, ada banyak orang yang sayang sama kamu, termasuk aku. Mungkin aku cuma satu dari sekian banyak fans, tapi perasaan ini tulus banget." },
-    { type: "paragraph", text: "Oh iya, satu lagi. Kalau kamu baca ini pas lagi sedih, aku harap surat ini bisa bikin kamu senyum walau cuma sedikit. Dan kalau kamu baca ini pas lagi seneng, anggap aja ini tambahan kebahagiaan dari aku 😊" },
-    { type: "paragraph", text: "Aku selalu percaya kalau kebaikan yang kamu tebar ke dunia pasti akan kembali ke kamu berlipat ganda. Jadi terus jadi diri kamu yang apa adanya ya. Jangan pernah berubah demi orang lain kalau itu bikin kamu ga bahagia." },
+    {
+      type: "paragraph",
+      text: "Sebenernya banyak banget yang mau aku omongin di sini, tapi aku ga tau harus mulai dari mana. Jadi yaudah, aku tulis aja semua yang ada di kepala aku ya.",
+    },
+    {
+      type: "paragraph",
+      text: "Pertama, aku mau bilang makasih. Makasih udah jadi salah satu alasan aku semangat ngejalainin hari-hari. Jujurrrrrr kadang hidup tuh berat banget... tapi setiap kali liat kamu ketawa, nyanyi, atau bahkan cuma ngobrol random, rasanya tuh... gimana ya, kayak dunia jadi lebih ringan lebih cerah aja gitu ^^",
+    },
+    {
+      type: "paragraph",
+      text: "Kedua, aku mau bilang kalau aku bangga banget sama kamu. Aku tau perjalanan kamu ga selalu mulus, pasti ada hari-hari dimana kamu ngerasa capek, ngerasa ga cukup, atau bahkan pengen nyerah. Tapi kamu tetep di sini. Kamu tetep berjuang. Dan itu... itu yang bikin aku makin amaze sama kak Rin.",
+    },
+    {
+      type: "japanese",
+      text: "大切な人へ、いつもそばにいるよ。",
+      sub: "(Untuk orang yang berharga, aku selalu ada di sisimu.)",
+    },
+    {
+      type: "paragraph",
+      text: 'Ketiga — dan ini yang paling penting — aku mau kamu tau kalau kamu ga sendirian. Apapun yang terjadi, ada banyak orang yang sayang sama kak Rin ada banyak orang yang support kak Rin, termasuk aku. Mungkin kalo aku bisa pinjem lagu nya Idolize "Ku hanya satu diantara keramaian" aku cuma satu dari sekian banyak fans, tapi perasaan ini nyata adanya kak hwaaaa.',
+    },
+    {
+      type: "paragraph",
+      text: "Oh iya, satu lagi. Kalau kamu baca ini pas lagi sedih, aku harap surat ini bisa bikin kamu senyum walau cuma sedikit. Dan kalau kamu baca ini pas lagi seneng, anggap aja ini tambahan kebahagiaan dari aku (>///<)9",
+    },
+    {
+      type: "paragraph",
+      text: "Aku selalu percaya kalau kebaikan yang kak Rin tebar ke dunia pasti akan kembali ke kak Rin berlipat ganda. Jadi terus jadi diri kak Rin yang apa adanya ya. Jangan pernah berubah demi orang lain kalau itu bikin kak Rin ga bahagia.",
+    },
+    {
+      type: "japanese",
+      text: "あの日の出会いに悔いはない。Thank you　今日までありがとう。",
+      sub: "(Aku tidak menyesal bertemu denganmu di hari itu. Terima kasih, terima kasih untuk hari ini.)",
+    },
     { type: "divider" },
-    { type: "paragraph", text: "P.S. Kalau nanti kapan-kapan kamu baca ulang surat ini, aku harap kamu ingat satu hal: kamu dicintai lebih dari yang kamu kira. Selalu. 💕" },
-    { type: "paragraph", text: "P.P.S. Jangan lupa minum air putih yang banyak!!! Dan tidur yang cukup!!! Ini penting!!!" },
-    { type: "paragraph", text: "P.P.P.S. Aku ga akan pernah bosen dukung kamu. Sampai kapanpun. 🌸" },
+    {
+      type: "paragraph",
+      text: "P.S. Kalau nanti kapan-kapan kak Rin baca ulang surat ini, aku harap kak Rin ingat satu hal: kak Rin dicintai lebih dari yang kak Rin kira. いつも. 💕",
+    },
+    {
+      type: "paragraph",
+      text: "P.P.S. Jangan lupa minum air putih yang banyak!!! Dan tidur yang cukup!!! Jangan Begadaaaaangg dan Telaatt Makaaaaannnnnn!!!",
+    },
+    {
+      type: "paragraph",
+      text: "P.P.P.S. Bahagia selalu Rin-channn! 🌸",
+    },
   ];
 
   return (
@@ -238,7 +283,9 @@ export default function Home() {
       {showGlow && <div className="glow-burst" />}
 
       {step < 2 ? (
-        <div className={`envelope-container relative z-10 ${shakeScreen ? "screen-shake" : ""}`}>
+        <div
+          className={`envelope-container relative z-10 ${shakeScreen ? "screen-shake" : ""}`}
+        >
           <div
             className={`envelope-wrapper ${step === 1 ? "is-opening" : ""}`}
             onClick={handleOpenEnvelope}
@@ -259,7 +306,12 @@ export default function Home() {
               <div className="paper-inside"></div>
               <div className="front-pocket"></div>
               <div className="heart-seal flex items-center justify-center">
-                <Heart size={36} fill="#ffebf0" stroke="#ffb3c6" strokeWidth={1} />
+                <Heart
+                  size={36}
+                  fill="#ffebf0"
+                  stroke="#ffb3c6"
+                  strokeWidth={1}
+                />
               </div>
             </div>
           </div>
@@ -292,15 +344,32 @@ export default function Home() {
           </div>
 
           <div className="min-h-screen pb-32 animate-enter-paper pt-12 md:pt-20 relative z-10">
-            <main className="max-w-3xl mx-auto w-full px-4 sm:px-6" ref={pageContainerRef}>
-              
+            <main
+              className="max-w-3xl mx-auto w-full px-4 sm:px-6"
+              ref={pageContainerRef}
+            >
               {/* SECTION 1: HEADER & PEMBUKA (No fold down animation, this is the top sheet) */}
               <div className="paper-lines paper-margin bg-white px-6 md:px-16 pt-16 pb-8 border border-b-0 border-pink-200 relative glow-paper rounded-t-2xl z-20 shadow-md">
-                <div className="sticker sticker-top-right" style={{ "--sticker-rot": "12deg" }}>
-                  <Star size={32} className="text-yellow-400" fill="#ffd700" strokeWidth={1.5} />
+                <div
+                  className="sticker sticker-top-right"
+                  style={{ "--sticker-rot": "12deg" }}
+                >
+                  <Star
+                    size={32}
+                    className="text-yellow-400"
+                    fill="#ffd700"
+                    strokeWidth={1.5}
+                  />
                 </div>
-                <div className="sticker sticker-top-left" style={{ "--sticker-rot": "-15deg" }}>
-                  <Flower2 size={30} className="text-pink-300" strokeWidth={1.5} />
+                <div
+                  className="sticker sticker-top-left"
+                  style={{ "--sticker-rot": "-15deg" }}
+                >
+                  <Flower2
+                    size={30}
+                    className="text-pink-300"
+                    strokeWidth={1.5}
+                  />
                 </div>
 
                 <div className="text-center font-cute mb-10 flex justify-center">
@@ -311,12 +380,14 @@ export default function Home() {
 
                 <div className="paper-content">
                   <h1 className="font-cute text-4xl md:text-5xl mb-8 text-gradient-pink font-bold flex items-center gap-3 flex-wrap">
-                    Dear Kururin aka Kurin <Flower2 className="text-pink-500" size={40} />
+                    Dear Kururin aka Kurin{" "}
+                    <Flower2 className="text-pink-500" size={40} />
                   </h1>
                   <p>
-                    Otcukarinsamadeshitaaaa! Terima kasih sudah selalu bekerja keras dan
-                    berjuang selama dan sejauh iniiiiii. Lewat surat sederhana ini, aku
-                    ingin mengabadikan sedikit rasa bahagia dan dukunganku untukmu.
+                    Otcukarinsamadeshitaaaa! Terima kasih sudah selalu bekerja
+                    keras dan berjuang selama dan sejauh iniiiiii. Lewat surat
+                    sederhana ini, aku ingin mengabadikan sedikit rasa bahagia
+                    dan dukunganku untukmu.
                   </p>
                   <p className="font-cute text-pink-600 font-bold text-xl pt-2">
                     君の笑顔は毎日を輝かせてくれるよ。
@@ -331,8 +402,15 @@ export default function Home() {
               {/* SECTION 2: MEMORI KITA (Fold 1) */}
               <div className="fold-wrapper relative z-10 -mt-1">
                 <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 py-12 border-l border-r border-t-0 border-pink-200 shadow-md">
-                  <div className="sticker sticker-top-right" style={{ "--sticker-rot": "18deg" }}>
-                    <Camera size={28} className="text-pink-400" strokeWidth={1.5} />
+                  <div
+                    className="sticker sticker-top-right"
+                    style={{ "--sticker-rot": "18deg" }}
+                  >
+                    <Camera
+                      size={28}
+                      className="text-pink-400"
+                      strokeWidth={1.5}
+                    />
                   </div>
 
                   <div className="text-center font-cute mb-8 flex justify-center">
@@ -343,37 +421,62 @@ export default function Home() {
 
                   <div className="paper-content">
                     <p>
-                      Setiap penampilanmu di panggung selalu membekas di hati ku. Ini
-                      adalah beberapa memori favorit yang sengaja aku simpan dan tempelkan
-                      di surat ini. Nanti aku akan penuhi bingkai ini dengan pose
-                      candid-mu yang paling lucu dan menggemaskan!
+                      Setiap pertemuan selalu memiliki memori indah sendiri di
+                      beluk sukma ku. Dan beberapa diantaranya adalah core
+                      memori yang akan selalu aku kenang dalam hidupku
+                      setidaknya saat ini. Bagiku pertemuan dengan kak rin
+                      adalah anugerah terindah yang pernah aku dapatkan
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 my-12 relative">
                       <div className="photo-frame rotate-3 reveal-on-scroll">
                         <div className="tape tape-pink"></div>
                         <div className="aspect-[4/3] bg-pink-50 flex flex-col items-center justify-center mb-3 border-2 border-dashed border-pink-200 rounded overflow-hidden">
-                          <img src="/assets/foto/pertemuan1.jpg" alt="Pertemuan Pertama" className="w-full h-full object-cover" />
+                          <img
+                            src="/assets/foto/pertemuan1.jpg"
+                            alt="Pertemuan Pertama"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="font-cute text-center text-md text-pink-600 font-bold flex items-center justify-center gap-2">
-                          Pertemuan Pertama Kitaaaa!! <Sparkles size={18} className="text-pink-400" />
+                          Pertemuan Pertama Kitaaaa!!{" "}
+                          <Sparkles size={18} className="text-pink-400" />
                         </p>
                       </div>
 
-                      <div className="photo-frame -rotate-2 mt-4 sm:mt-0 reveal-on-scroll" style={{ animationDelay: "0.2s" }}>
+                      <div
+                        className="photo-frame -rotate-2 mt-4 sm:mt-0 reveal-on-scroll"
+                        style={{ animationDelay: "0.2s" }}
+                      >
                         <div className="tape tape-lavender"></div>
                         <div className="aspect-[4/3] bg-pink-50 flex flex-col items-center justify-center mb-3 border-2 border-dashed border-pink-200 rounded overflow-hidden">
-                          <img src="/assets/foto/fotofav.jpg" alt="Foto Favorit" className="w-full h-full object-cover" />
+                          <img
+                            src="/assets/foto/fotofav.jpg"
+                            alt="Foto Favorit"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="font-cute text-center text-md text-pink-600 font-bold flex items-center justify-center gap-2">
-                          Foto Favorit yang aku ambil :3 <Heart size={18} fill="#ff75a3" className="text-pink-400" />
+                          Foto Favorit yang aku ambil :3{" "}
+                          <Heart
+                            size={18}
+                            fill="#ff75a3"
+                            className="text-pink-400"
+                          />
                         </p>
                       </div>
 
-                      <div className="photo-frame rotate-2 mt-4 sm:mt-0 reveal-on-scroll" style={{ animationDelay: "0.4s" }}>
+                      <div
+                        className="photo-frame rotate-2 mt-4 sm:mt-0 reveal-on-scroll"
+                        style={{ animationDelay: "0.4s" }}
+                      >
                         <div className="tape tape-mint"></div>
                         <div className="aspect-[4/3] bg-pink-50 flex flex-col items-center justify-center mb-3 border-2 border-dashed border-pink-200 rounded overflow-hidden">
-                          <img src="/assets/foto/vc.jpg" alt="Video Call Pertama" className="w-full h-full object-cover" />
+                          <img
+                            src="/assets/foto/vc.jpg"
+                            alt="Video Call Pertama"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="font-cute text-center text-md text-pink-600 font-bold flex items-center justify-center gap-2">
                           ini kayakny Video Call pertama aku :(
@@ -381,13 +484,25 @@ export default function Home() {
                         </p>
                       </div>
 
-                      <div className="photo-frame -rotate-3 mt-4 sm:mt-0 reveal-on-scroll" style={{ animationDelay: "0.6s" }}>
+                      <div
+                        className="photo-frame -rotate-3 mt-4 sm:mt-0 reveal-on-scroll"
+                        style={{ animationDelay: "0.6s" }}
+                      >
                         <div className="tape tape-gold"></div>
                         <div className="aspect-[4/3] bg-pink-50 flex flex-col items-center justify-center mb-3 border-2 border-dashed border-pink-200 rounded overflow-hidden">
-                          <img src="/assets/foto/selfie.jpg" alt="Selfie Favorit" className="w-full h-full object-cover" />
+                          <img
+                            src="/assets/foto/selfie.jpg"
+                            alt="Selfie Favorit"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <p className="font-cute text-center text-md text-pink-600 font-bold flex items-center justify-center gap-2">
-                          selfie paling aku suka! <Heart size={18} fill="#ff75a3" className="text-pink-400" />
+                          selfie paling aku suka!{" "}
+                          <Heart
+                            size={18}
+                            fill="#ff75a3"
+                            className="text-pink-400"
+                          />
                         </p>
                       </div>
                     </div>
@@ -413,26 +528,33 @@ export default function Home() {
                       </span>
                     </p>
                     <p>
-                      Aku tau momen momen kemarin kamu pasti cape banget buat kamu off
-                      sosmed :(, butttt, liat ini kak! beberapa moment kamu selama ini di
-                      Nekodachi dari aku yang mengagumi dari balik layar kamera. Kamu sudah
-                      menyebarkan sebanyak ini kebahagiaan ke banyak orang. Aku bangga
-                      banget sama Kak Riinn.
+                      Aku tau momen momen kemarin kamu pasti cape banget buat
+                      kamu off sosmed :(, butttt, liat ini kak! beberapa moment
+                      kamu selama ini di Nekodachi dari aku yang mengagumi dari
+                      balik layar kamera. Kamu sudah menyebarkan sebanyak ini
+                      kebahagiaan ke banyak orang. Aku bangga banget sama Kak
+                      Riinn.
                     </p>
 
                     <div className="my-12 mx-auto w-full max-w-md photo-frame rotate-1 reveal-on-scroll">
                       <div className="tape tape-striped"></div>
                       <div className="aspect-video bg-pink-50 border-2 border-dashed border-pink-200 rounded overflow-hidden">
-                        <video
-                          src="/assets/video/memories.mp4"
-                          controls
-                          playsInline
-                          preload="metadata"
-                          className="w-full h-full object-cover rounded"
+                        <iframe
+                          src="https://drive.google.com/file/d/1dG2mvjE0GZCz_W3LMNy-maVRQHZKSjsA/preview"
+                          allow="autoplay"
+                          allowFullScreen
+                          className="w-full h-full rounded"
+                          style={{ border: "none" }}
+                          loading="lazy"
                         />
                       </div>
                       <p className="font-cute text-center mt-3 text-md text-pink-600 font-bold flex items-center justify-center gap-2">
-                        Throwback konser favorit <Heart size={18} fill="#ff75a3" className="text-pink-400" />
+                        Throwback konser favorit{" "}
+                        <Heart
+                          size={18}
+                          fill="#ff75a3"
+                          className="text-pink-400"
+                        />
                       </p>
                     </div>
                   </div>
@@ -442,8 +564,15 @@ export default function Home() {
               {/* SECTION 4: DEEP LETTER (Fold 3) */}
               <div className="fold-wrapper relative z-6 -mt-1">
                 <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 py-12 border-l border-r border-t-0 border-pink-200 shadow-md">
-                   <div className="sticker sticker-top-right" style={{ "--sticker-rot": "10deg" }}>
-                    <PenLine size={28} className="text-pink-400" strokeWidth={1.5} />
+                  <div
+                    className="sticker sticker-top-right"
+                    style={{ "--sticker-rot": "10deg" }}
+                  >
+                    <PenLine
+                      size={28}
+                      className="text-pink-400"
+                      strokeWidth={1.5}
+                    />
                   </div>
 
                   <div className="text-center font-cute mb-8 flex justify-center">
@@ -456,7 +585,7 @@ export default function Home() {
                     <h2 className="font-cute text-2xl md:text-3xl mb-6 text-gradient-pink font-bold reveal-on-scroll flex items-center gap-2">
                       ✍️ Hal-Hal yang Ingin Aku Sampaikan...
                     </h2>
-                    
+
                     {page4Lines.map((line, index) => {
                       if (line.type === "japanese") {
                         return (
@@ -473,7 +602,10 @@ export default function Home() {
                       }
                       if (line.type === "divider") {
                         return (
-                          <div key={index} className="section-divider my-6 reveal-on-scroll">
+                          <div
+                            key={index}
+                            className="section-divider my-6 reveal-on-scroll"
+                          >
                             <Sparkles size={16} />
                           </div>
                         );
@@ -491,8 +623,16 @@ export default function Home() {
               {/* SECTION 5: FOOTER (Fold 4) */}
               <div className="fold-wrapper relative z-4 -mt-1">
                 <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 pt-12 pb-24 border border-t-0 border-pink-200 rounded-b-2xl shadow-md">
-                  <div className="sticker sticker-bottom-left" style={{ "--sticker-rot": "-8deg" }}>
-                    <Star size={24} className="text-yellow-300" fill="#ffd700" strokeWidth={1.5} />
+                  <div
+                    className="sticker sticker-bottom-left"
+                    style={{ "--sticker-rot": "-8deg" }}
+                  >
+                    <Star
+                      size={24}
+                      className="text-yellow-300"
+                      fill="#ffd700"
+                      strokeWidth={1.5}
+                    />
                   </div>
 
                   <div className="text-center font-cute mb-8 flex justify-center">
@@ -511,9 +651,10 @@ export default function Home() {
                     </p>
 
                     <p>
-                      Sampai jumpa di pertemuan selanjutnya ya kak! Aku ga sabar ketemu
-                      kamu lagi. Have a wonderful day, wonderful week, wonderful month, dan
-                      wonderful life! 🌸✨
+                      Sampai jumpa di pertemuan selanjutnya ya kak! Aku harap
+                      ini bukanlah akhir dari pertemuan kitaa. Have a wonderful
+                      day, wonderful week, wonderful month, dan wonderful life!
+                      because u are my WondeRin 🌸✨
                     </p>
 
                     <div className="section-divider my-8">
@@ -538,7 +679,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
             </main>
           </div>
         </>
