@@ -15,7 +15,7 @@ const nunito = Nunito({
 
 export const metadata = {
   title: "For You 🌸",
-  description: "Sebuah ucapan manis untuk idol kesayangan",
+  description: "Sebuah Surat untuk Kurin 🌸",
 };
 
 export default function RootLayout({ children }) {
