@@ -549,7 +549,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-cute text-center mt-3 text-md text-pink-600 font-bold flex items-center justify-center gap-2">
-                        Throwback konser favorit{" "}
+                        Little Memori{" "}
                         <Heart
                           size={18}
                           fill="#ff75a3"
