@@ -31,21 +31,15 @@ const CONFETTI_COLORS = [
   "#ffeaa7",
 ];
 
+const PROFILE_GIFT_URL = "https://your-profile-link-here";
+
 export default function Home() {
   const [step, setStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audio, setAudio] = useState(null);
-  const [particles, setParticles] = useState([]);
-  const [showConfetti, setShowConfetti] = useState(false);
-  const [showGlow, setShowGlow] = useState(false);
-  const [shakeScreen, setShakeScreen] = useState(false);
-  const [confettiPieces, setConfettiPieces] = useState([]);
-  const pageContainerRef = useRef(null);
-
-  // Generate particles on mount - REDUCED FROM 35 to 15 FOR PERFORMANCE
-  useEffect(() => {
+  const audioRef = useRef(null);
+  const [particles] = useState(() => {
     const icons = ["flower", "star", "heart", "sparkles", "petal", "cherry"];
-    const newParticles = Array.from({ length: 15 }).map((_, i) => ({
+    return Array.from({ length: 15 }).map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}vw`,
       animationDuration: `${15 + Math.random() * 20}s`,
@@ -54,18 +48,23 @@ export default function Home() {
       type: icons[Math.floor(Math.random() * icons.length)],
       layer: i < 5 ? "layer-back" : "layer-front",
     }));
-    setParticles(newParticles);
-  }, []);
+  });
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [showGlow, setShowGlow] = useState(false);
+  const [shakeScreen, setShakeScreen] = useState(false);
+  const [confettiPieces, setConfettiPieces] = useState([]);
+  const pageContainerRef = useRef(null);
 
   // Audio setup
   useEffect(() => {
     const bgm = new Audio("/assets/lagu/Nekodachi - Balik Layar.mp3");
     bgm.loop = true;
-    setAudio(bgm);
+    audioRef.current = bgm;
 
     return () => {
       bgm.pause();
       bgm.src = "";
+      audioRef.current = null;
     };
   }, []);
 
@@ -148,8 +147,9 @@ export default function Home() {
     setShowGlow(true);
     setTimeout(() => setShowGlow(false), 1500);
 
-    if (audio) {
-      audio.play().catch((e) => console.log("Audio play prevented:", e));
+    const bgm = audioRef.current;
+    if (bgm) {
+      bgm.play().catch((e) => console.log("Audio play prevented:", e));
       setIsPlaying(true);
     }
 
@@ -160,11 +160,13 @@ export default function Home() {
   };
 
   const toggleMusic = () => {
-    if (!audio) return;
+    const bgm = audioRef.current;
+    if (!bgm) return;
+
     if (isPlaying) {
-      audio.pause();
+      bgm.pause();
     } else {
-      audio.play().catch((e) => console.log("Audio play prevented:", e));
+      bgm.play().catch((e) => console.log("Audio play prevented:", e));
     }
     setIsPlaying(!isPlaying);
   };
@@ -226,7 +228,7 @@ export default function Home() {
     { type: "divider" },
     {
       type: "paragraph",
-      text: "P.S. Kalau nanti kapan-kapan kak Rin baca ulang surat ini, aku harap kak Rin ingat satu hal: kak Rin dicintai lebih dari yang kak Rin kira. いつも. 💕",
+      text: "P.S. Kalau nanti kapan-kapan kak Rin baca ulang surat ini, aku harap kak Rin ingat satu hal: Saat dunia ini perlahan akan berubah, ku tetap jatuh cinta seperti hari ini. いつも. 💕",
     },
     {
       type: "paragraph",
@@ -425,7 +427,7 @@ export default function Home() {
                       beluk sukma ku. Dan beberapa diantaranya adalah core
                       memori yang akan selalu aku kenang dalam hidupku
                       setidaknya saat ini. Bagiku pertemuan dengan kak rin
-                      adalah anugerah terindah yang pernah aku dapatkan
+                      adalah anugerah terindah yang pernah aku dapatkan. dan semoga jika nanti langkah mu perlahan-lahan menjauh ku harap kenangan ini ga luntur ya! karena kamu adalah musim terindah dalam hidupku {'<3'}
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 my-12 relative">
@@ -515,7 +517,7 @@ export default function Home() {
                 <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 py-12 border-l border-r border-t-0 border-pink-200 shadow-md">
                   <div className="text-center font-cute mb-8 flex justify-center">
                     <span className="bg-pink-100/90 px-6 py-2.5 rounded-full text-pink-600 uppercase tracking-widest text-xs font-extrabold border border-pink-200 flex items-center gap-2 shadow-sm">
-                      <PlayCircle size={16} /> Behind The Scenes
+                      <PlayCircle size={16} /> Aku dari Balik Layar Kamera!
                     </span>
                   </div>
 
@@ -529,7 +531,7 @@ export default function Home() {
                     </p>
                     <p>
                       Aku tau momen momen kemarin kamu pasti cape banget buat
-                      kamu off sosmed :(, butttt, liat ini kak! beberapa moment
+                      kamu off sosmed :( butttt, liat ini kak! beberapa moment
                       kamu selama ini di Nekodachi dari aku yang mengagumi dari
                       balik layar kamera. Kamu sudah menyebarkan sebanyak ini
                       kebahagiaan ke banyak orang. Aku bangga banget sama Kak
@@ -675,6 +677,26 @@ export default function Home() {
                         <Heart size={18} fill="#ff75a3" />
                         <Heart size={14} fill="#ffb6c1" />
                       </div>
+                    </div>
+
+                    <div className="mt-12 flex justify-center reveal-on-scroll">
+                      <a
+                        href={PROFILE_GIFT_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Buka kado"
+                        className="group inline-flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed border-pink-200 bg-pink-50/70 px-8 py-6 shadow-sm transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                      >
+                        <span className="inline-flex items-center justify-center h-16 w-16 rounded-2xl bg-white border border-pink-200 shadow-sm group-hover:shadow-md transition-shadow">
+                          <Gift size={34} className="text-pink-500" />
+                        </span>
+                        <span className="font-cute text-lg text-pink-600 font-bold">
+                          Klik kadonya ya
+                        </span>
+                        <span className="text-xs text-pink-400">
+                          (Ini kado ke 2 dari aku, semoga cocok yaaa)
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
