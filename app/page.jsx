@@ -351,7 +351,7 @@ export default function Home() {
               ref={pageContainerRef}
             >
               {/* SECTION 1: HEADER & PEMBUKA (No fold down animation, this is the top sheet) */}
-              <div className="paper-lines paper-margin bg-white px-6 md:px-16 pt-16 pb-8 border border-b-0 border-pink-200 relative glow-paper rounded-t-2xl z-20 shadow-md">
+              <div className="paper-lines paper-margin bg-white px-6 md:px-16 pt-[64px] pb-[32px] border border-b-0 border-pink-200 relative glow-paper rounded-t-2xl z-20 shadow-md">
                 <div
                   className="sticker sticker-top-right"
                   style={{ "--sticker-rot": "12deg" }}
@@ -374,15 +374,15 @@ export default function Home() {
                   />
                 </div>
 
-                <div className="text-center font-cute mb-10 flex justify-center">
+                <div className="text-center font-cute mb-8 flex justify-center">
                   <span className="bg-pink-100/90 px-6 py-2.5 rounded-full text-pink-600 uppercase tracking-widest text-xs font-extrabold border border-pink-200 flex items-center gap-2 shadow-sm">
                     <Gift size={16} /> To my favorite person
                   </span>
                 </div>
 
                 <div className="paper-content">
-                  <h1 className="font-cute text-4xl md:text-5xl mb-8 text-gradient-pink font-bold flex items-center gap-3 flex-wrap">
-                    Dear Kururin aka Kurin{" "}
+                  <h1 className="font-cute text-4xl md:text-5xl mb-[32px] text-gradient-pink font-bold flex items-center gap-3 flex-wrap">
+                    Dear Rin-chan{" "}
                     <Flower2 className="text-pink-500" size={40} />
                   </h1>
                   <p>
@@ -403,7 +403,7 @@ export default function Home() {
 
               {/* SECTION 2: MEMORI KITA (Fold 1) */}
               <div className="fold-wrapper relative z-10 -mt-1">
-                <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 py-12 border-l border-r border-t-0 border-pink-200 shadow-md">
+                <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 py-[64px] border-l border-r border-t-0 border-pink-200 shadow-md">
                   <div
                     className="sticker sticker-top-right"
                     style={{ "--sticker-rot": "18deg" }}
@@ -433,7 +433,7 @@ export default function Home() {
                       terindah dalam hidupku {"<3"}
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 my-12 relative">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-[32px] my-[64px] relative">
                       <div className="photo-frame rotate-3 reveal-on-scroll">
                         <div className="tape tape-pink"></div>
                         <div className="aspect-[4/3] bg-pink-50 flex flex-col items-center justify-center mb-3 border-2 border-dashed border-pink-200 rounded overflow-hidden">
@@ -517,7 +517,7 @@ export default function Home() {
 
               {/* SECTION 3: BEHIND THE SCENES (Fold 2) */}
               <div className="fold-wrapper relative z-8 -mt-1">
-                <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 py-12 border-l border-r border-t-0 border-pink-200 shadow-md">
+                <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 py-[64px] border-l border-r border-t-0 border-pink-200 shadow-md">
                   <div className="text-center font-cute mb-8 flex justify-center">
                     <span className="bg-pink-100/90 px-6 py-2.5 rounded-full text-pink-600 uppercase tracking-widest text-xs font-extrabold border border-pink-200 flex items-center gap-2 shadow-sm">
                       <PlayCircle size={16} /> Aku dari Balik Layar Kamera!
@@ -541,7 +541,7 @@ export default function Home() {
                       Riinn.
                     </p>
 
-                    <div className="my-12 mx-auto w-full max-w-md photo-frame rotate-1 reveal-on-scroll">
+                    <div className="my-[64px] mx-auto w-full max-w-md photo-frame rotate-1 reveal-on-scroll">
                       <div className="tape tape-striped"></div>
                       <div className="aspect-video bg-pink-50 border-2 border-dashed border-pink-200 rounded overflow-hidden">
                         <iframe
@@ -568,7 +568,7 @@ export default function Home() {
 
               {/* SECTION 4: DEEP LETTER (Fold 3) */}
               <div className="fold-wrapper relative z-6 -mt-1">
-                <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 py-12 border-l border-r border-t-0 border-pink-200 shadow-md">
+                <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 py-[64px] border-l border-r border-t-0 border-pink-200 shadow-md">
                   <div
                     className="sticker sticker-top-right"
                     style={{ "--sticker-rot": "10deg" }}
@@ -587,7 +587,7 @@ export default function Home() {
                   </div>
 
                   <div className="paper-content">
-                    <h2 className="font-cute text-2xl md:text-3xl mb-6 text-gradient-pink font-bold reveal-on-scroll flex items-center gap-2">
+                    <h2 className="font-cute text-2xl md:text-3xl mb-[32px] text-gradient-pink font-bold reveal-on-scroll flex items-center gap-2">
                       ✍️ Hal-Hal yang Ingin Aku Sampaikan...
                     </h2>
 
@@ -627,7 +627,7 @@ export default function Home() {
 
               {/* SECTION 5: FOOTER (Fold 4) */}
               <div className="fold-wrapper relative z-4 -mt-1">
-                <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 pt-12 pb-24 border border-t-0 border-pink-200 rounded-b-2xl shadow-md">
+                <div className="fold-item bg-white paper-lines paper-margin px-6 md:px-16 pt-[64px] pb-[96px] border border-t-0 border-pink-200 rounded-b-2xl shadow-md">
                   <div
                     className="sticker sticker-bottom-left"
                     style={{ "--sticker-rot": "-8deg" }}

@@ -346,7 +346,7 @@ body {
 .paper-lines {
   background-color: var(--paper-bg);
   background-image: repeating-linear-gradient(transparent, transparent 31px, var(--paper-line) 31px, var(--paper-line) 32px);
-  background-position: top center;
+  background-position-y: -5px;
   box-shadow: 0 0 30px rgba(255, 182, 208, 0.5);
 }
 
@@ -365,11 +365,25 @@ body {
   z-index: 1;
 }
 
+/* All text inside paper-content snaps to 32px grid */
 .paper-content p {
   line-height: 32px;
   min-height: 32px;
-  margin-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 32px;
   font-size: 1.1rem;
+}
+
+.paper-content h1,
+.paper-content h2 {
+  line-height: 32px;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.paper-content .font-cute {
+  line-height: 32px;
 }
 
 .fold-wrapper {
