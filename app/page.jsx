@@ -31,7 +31,7 @@ const CONFETTI_COLORS = [
   "#ffeaa7",
 ];
 
-const PROFILE_GIFT_URL = "https://your-profile-link-here";
+const PROFILE_GIFT_URL = "https://kurinporto.vercel.app/";
 
 export default function Home() {
   const [step, setStep] = useState(0);
@@ -197,11 +197,11 @@ export default function Home() {
     },
     {
       type: "paragraph",
-      text: "Pertama, aku mau bilang makasih. Makasih udah jadi salah satu alasan aku semangat ngejalainin hari-hari. Jujurrrrrr kadang hidup tuh berat banget... tapi setiap kali liat kamu ketawa, nyanyi, atau bahkan cuma ngobrol random, rasanya tuh... gimana ya, kayak dunia jadi lebih ringan lebih cerah aja gitu ^^",
+      text: "Pertama, aku mau bilang makasih. Makasih udah jadi salah satu alasan aku semangat ngejalainin hari-hari. Jujurrrrrr kadang hidup tuh berat banget... tapi setiap kali liat kamu ketawa, nyanyi, atau bahkan cuma ngobrol random, rasanya tuh... gimana ya, kayak dunia jadi lebih ringan, lebih cerah. makasih atas semua energi yang kak rin bagikan, your smile, warm heart, positive vibes, all of this experience 10/10 very recommended!",
     },
     {
       type: "paragraph",
-      text: "Kedua, aku mau bilang kalau aku bangga banget sama kamu. Aku tau perjalanan kamu ga selalu mulus, pasti ada hari-hari dimana kamu ngerasa capek, ngerasa ga cukup, atau bahkan pengen nyerah. Tapi kamu tetep di sini. Kamu tetep berjuang. Dan itu... itu yang bikin aku makin amaze sama kak Rin.",
+      text: "Kedua, aku mau bilang kalau aku bangga banget sama kak rin. Aku tau perjalanan kak rin ga selalu mulus, pasti ada hari-hari dimana kak rin ngerasa capek, ngerasa ga cukup, atau bahkan pengen nyerah. Tapi kak rin tetep di sini. Kak rin tetep berjuang. Dan itu... itu yang bikin aku makin amaze sama kak Rin.",
     },
     {
       type: "japanese",
@@ -210,7 +210,7 @@ export default function Home() {
     },
     {
       type: "paragraph",
-      text: 'Ketiga — dan ini yang paling penting — aku mau kamu tau kalau kamu ga sendirian. Apapun yang terjadi, ada banyak orang yang sayang sama kak Rin ada banyak orang yang support kak Rin, termasuk aku. Mungkin kalo aku bisa pinjem lagu nya Idolize "Ku hanya satu diantara keramaian" aku cuma satu dari sekian banyak fans, tapi perasaan ini nyata adanya kak hwaaaa.',
+      text: "Ketiga — dan ini yang paling penting — aku mau kamu tau kalau kamu ga sendirian. Apapun yang terjadi, ada banyak orang yang sayang sama kak Rin ada banyak orang yang support kak Rin. Jadi kedepan nya apapun jalan yang kak rin pilih, lakukan itu dengan bangga ya kak! ",
     },
     {
       type: "paragraph",
@@ -427,7 +427,10 @@ export default function Home() {
                       beluk sukma ku. Dan beberapa diantaranya adalah core
                       memori yang akan selalu aku kenang dalam hidupku
                       setidaknya saat ini. Bagiku pertemuan dengan kak rin
-                      adalah anugerah terindah yang pernah aku dapatkan. dan semoga jika nanti langkah mu perlahan-lahan menjauh ku harap kenangan ini ga luntur ya! karena kamu adalah musim terindah dalam hidupku {'<3'}
+                      adalah anugerah terindah yang pernah aku dapatkan. dan
+                      semoga jika nanti langkah mu perlahan-lahan menjauh ku
+                      harap kenangan ini ga luntur ya! karena kamu adalah musim
+                      terindah dalam hidupku {"<3"}
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 my-12 relative">
@@ -481,7 +484,7 @@ export default function Home() {
                           />
                         </div>
                         <p className="font-cute text-center text-md text-pink-600 font-bold flex items-center justify-center gap-2">
-                          ini kayakny Video Call pertama aku :(
+                          aku suka gift dariku dipamerin begini terus :3
                           <Sparkles size={18} className="text-pink-400" />
                         </p>
                       </div>
@@ -694,7 +697,7 @@ export default function Home() {
                           Klik kadonya ya
                         </span>
                         <span className="text-xs text-pink-400">
-                          (Ini kado ke 2 dari aku, semoga cocok yaaa)
+                          (Ini kado ke 2 dari aku, semoga kamu suka yaaa)
                         </span>
                       </a>
                     </div>
